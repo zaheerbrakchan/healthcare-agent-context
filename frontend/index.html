@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Healthcare Agent Chat</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Healthcare Agent Chat</h2>
+  <select id="agent">
+    <option value="appointment">Appointment Agent</option>
+    <option value="preassessment">Preassessment Agent</option>
+  </select>
+
+  <div id="chat-box"></div>
+  <input id="query" placeholder="Type your message..." />
+  <button onclick="sendMessage()">Send</button>
+</body>
+</html>
