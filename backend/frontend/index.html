@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare Agent Platform</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Healthcare Agent Platform</h1>
+
+    <div class="agents">
+      <div class="agent-card" onclick="openChat('appointment')">
+        <h2>🩺 Appointment Agent</h2>
+        <p>Book, manage, or check available appointment slots.</p>
+      </div>
+
+      <div class="agent-card" onclick="openChat('preassessment')">
+        <h2>📋 Preassessment Agent</h2>
+        <p>Submit preassessment details and get AI guidance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 💬 Chat Popup -->
+  <div id="chatPopup" class="chat-popup hidden">
+    <div class="chat-header">
+      <span id="chatTitle"></span>
+      <button class="close-btn" onclick="closeChat()">×</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatQuery" placeholder="Type your message..." onkeypress="if(event.key==='Enter') sendMessage()">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
